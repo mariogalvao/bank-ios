@@ -34,6 +34,17 @@
 		D590C2C825963DFA00B833E3 /* ProfileHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C2C525963DFA00B833E3 /* ProfileHomeViewController.swift */; };
 		D590C2C925963DFA00B833E3 /* ProfileHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C2C625963DFA00B833E3 /* ProfileHomeViewModel.swift */; };
 		D590C2CA25963DFA00B833E3 /* ProfileHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D590C2C725963DFA00B833E3 /* ProfileHomeViewController.xib */; };
+		D590C2DA25969F8700B833E3 /* BalanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C2D825969F8700B833E3 /* BalanceTableViewCell.swift */; };
+		D590C2DB25969F8700B833E3 /* BalanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D590C2D925969F8700B833E3 /* BalanceTableViewCell.xib */; };
+		D590C3132596B35200B833E3 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C3122596B35200B833E3 /* SearchController.swift */; };
+		D590C32B259778FA00B833E3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C329259778FA00B833E3 /* HeaderView.swift */; };
+		D590C32C259778FA00B833E3 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D590C32A259778FA00B833E3 /* HeaderView.xib */; };
+		D590C34725977EAD00B833E3 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C34625977EAD00B833E3 /* Transactions.swift */; };
+		D590C3512597816600B833E3 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C34F2597816600B833E3 /* ItemTableViewCell.swift */; };
+		D590C3522597816600B833E3 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D590C3502597816600B833E3 /* ItemTableViewCell.xib */; };
+		D590C3672597C85700B833E3 /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C3642597C85700B833E3 /* ComingSoonViewController.swift */; };
+		D590C3682597C85700B833E3 /* ComingSoonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C3652597C85700B833E3 /* ComingSoonViewModel.swift */; };
+		D590C3692597C85700B833E3 /* ComingSoonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D590C3662597C85700B833E3 /* ComingSoonViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +98,17 @@
 		D590C2C525963DFA00B833E3 /* ProfileHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewController.swift; sourceTree = "<group>"; };
 		D590C2C625963DFA00B833E3 /* ProfileHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewModel.swift; sourceTree = "<group>"; };
 		D590C2C725963DFA00B833E3 /* ProfileHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHomeViewController.xib; sourceTree = "<group>"; };
+		D590C2D825969F8700B833E3 /* BalanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableViewCell.swift; sourceTree = "<group>"; };
+		D590C2D925969F8700B833E3 /* BalanceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceTableViewCell.xib; sourceTree = "<group>"; };
+		D590C3122596B35200B833E3 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		D590C329259778FA00B833E3 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		D590C32A259778FA00B833E3 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		D590C34625977EAD00B833E3 /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
+		D590C34F2597816600B833E3 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		D590C3502597816600B833E3 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		D590C3642597C85700B833E3 /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
+		D590C3652597C85700B833E3 /* ComingSoonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewModel.swift; sourceTree = "<group>"; };
+		D590C3662597C85700B833E3 /* ComingSoonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComingSoonViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +160,10 @@
 			isa = PBXGroup;
 			children = (
 				D590C261259626B800B833E3 /* base */,
+				D590C2D625969E1900B833E3 /* components */,
 				D590C262259626BE00B833E3 /* modules */,
+				D590C34525977E8600B833E3 /* models */,
+				D590C30C2596A41C00B833E3 /* extensions */,
 			);
 			path = Bank;
 			sourceTree = "<group>";
@@ -171,6 +196,7 @@
 				D590C21C259623C900B833E3 /* ViewController.swift */,
 				D590C2772596282600B833E3 /* Coordinator.swift */,
 				D590C28C2596298500B833E3 /* ViewModel.swift */,
+				D590C3122596B35200B833E3 /* SearchController.swift */,
 				D590C221259623CA00B833E3 /* Assets.xcassets */,
 				D590C223259623CA00B833E3 /* LaunchScreen.storyboard */,
 				D590C226259623CA00B833E3 /* Info.plist */,
@@ -281,6 +307,93 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		D590C2D625969E1900B833E3 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				D590C3572597C7C500B833E3 /* viewControllers */,
+				D590C2D725969E2800B833E3 /* cells */,
+				D590C31E2597764000B833E3 /* views */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		D590C2D725969E2800B833E3 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				D590C34E2597815200B833E3 /* Item */,
+				D590C2E22596A21900B833E3 /* Balance */,
+				D590C3302597792000B833E3 /* Header */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		D590C2E22596A21900B833E3 /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				D590C2D825969F8700B833E3 /* BalanceTableViewCell.swift */,
+				D590C2D925969F8700B833E3 /* BalanceTableViewCell.xib */,
+			);
+			path = Balance;
+			sourceTree = "<group>";
+		};
+		D590C30C2596A41C00B833E3 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		D590C31E2597764000B833E3 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		D590C3302597792000B833E3 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				D590C329259778FA00B833E3 /* HeaderView.swift */,
+				D590C32A259778FA00B833E3 /* HeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		D590C34525977E8600B833E3 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D590C34625977EAD00B833E3 /* Transactions.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		D590C34E2597815200B833E3 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				D590C34F2597816600B833E3 /* ItemTableViewCell.swift */,
+				D590C3502597816600B833E3 /* ItemTableViewCell.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		D590C3562597C7A600B833E3 /* ComingSoon */ = {
+			isa = PBXGroup;
+			children = (
+				D590C3642597C85700B833E3 /* ComingSoonViewController.swift */,
+				D590C3652597C85700B833E3 /* ComingSoonViewModel.swift */,
+				D590C3662597C85700B833E3 /* ComingSoonViewController.xib */,
+			);
+			path = ComingSoon;
+			sourceTree = "<group>";
+		};
+		D590C3572597C7C500B833E3 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D590C3562597C7A600B833E3 /* ComingSoon */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -386,8 +499,12 @@
 			files = (
 				D590C225259623CA00B833E3 /* LaunchScreen.storyboard in Resources */,
 				D590C2CA25963DFA00B833E3 /* ProfileHomeViewController.xib in Resources */,
+				D590C3692597C85700B833E3 /* ComingSoonViewController.xib in Resources */,
 				D590C2B225963C9F00B833E3 /* CardsHomeViewController.xib in Resources */,
 				D590C2C025963DA500B833E3 /* InvestHomeViewController.xib in Resources */,
+				D590C3522597816600B833E3 /* ItemTableViewCell.xib in Resources */,
+				D590C2DB25969F8700B833E3 /* BalanceTableViewCell.xib in Resources */,
+				D590C32C259778FA00B833E3 /* HeaderView.xib in Resources */,
 				D590C222259623CA00B833E3 /* Assets.xcassets in Resources */,
 				D590C2882596294000B833E3 /* AccountHomeViewController.xib in Resources */,
 			);
@@ -416,22 +533,29 @@
 			files = (
 				D590C21D259623C900B833E3 /* ViewController.swift in Sources */,
 				D590C2922596299900B833E3 /* AccountHomeViewModel.swift in Sources */,
+				D590C2DA25969F8700B833E3 /* BalanceTableViewCell.swift in Sources */,
 				D590C28D2596298500B833E3 /* ViewModel.swift in Sources */,
+				D590C3512597816600B833E3 /* ItemTableViewCell.swift in Sources */,
 				D590C29F2596311600B833E3 /* InvestCoordinator.swift in Sources */,
 				D590C2B125963C9F00B833E3 /* CardsHomeViewModel.swift in Sources */,
 				D590C2C825963DFA00B833E3 /* ProfileHomeViewController.swift in Sources */,
 				D590C258259625DC00B833E3 /* TabBarController.swift in Sources */,
+				D590C34725977EAD00B833E3 /* Transactions.swift in Sources */,
 				D590C270259627B500B833E3 /* AccountCoordinator.swift in Sources */,
 				D590C25D2596266200B833E3 /* NavigationController.swift in Sources */,
 				D590C219259623C900B833E3 /* AppDelegate.swift in Sources */,
+				D590C3672597C85700B833E3 /* ComingSoonViewController.swift in Sources */,
 				D590C2A42596312200B833E3 /* ProfileCoordinator.swift in Sources */,
 				D590C2BF25963DA500B833E3 /* InvestHomeViewModel.swift in Sources */,
 				D590C2BE25963DA500B833E3 /* InvestHomeViewController.swift in Sources */,
 				D590C21B259623C900B833E3 /* SceneDelegate.swift in Sources */,
+				D590C3132596B35200B833E3 /* SearchController.swift in Sources */,
 				D590C2C925963DFA00B833E3 /* ProfileHomeViewModel.swift in Sources */,
 				D590C2782596282600B833E3 /* Coordinator.swift in Sources */,
 				D590C2B025963C9F00B833E3 /* CardsHomeViewController.swift in Sources */,
+				D590C3682597C85700B833E3 /* ComingSoonViewModel.swift in Sources */,
 				D590C2872596294000B833E3 /* AccountHomeViewController.swift in Sources */,
+				D590C32B259778FA00B833E3 /* HeaderView.swift in Sources */,
 				D590C2972596306B00B833E3 /* CardsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

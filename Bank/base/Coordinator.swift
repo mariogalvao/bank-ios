@@ -7,6 +7,6 @@
 
 import UIKit
 
-class Coordinator: NSObject {
+class Coordinator: NSObject {}
 
-}
+protocol CoordinatorProtocol {}

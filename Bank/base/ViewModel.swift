@@ -7,8 +7,6 @@
 
 import UIKit
 
-class ViewModel: NSObject {
-
-}
+class ViewModel: NSObject {}
 
 protocol ViewModelProtocol {}
