@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCollectionViewCell" id="gTV-IL-0wX" customClass="CardCollectionViewCell" customModule="Bank" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditcard" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yse-a1-15L">
+                        <rect key="frame" x="0.0" y="1.5" width="378" height="196.5"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Yse-a1-15L" secondAttribute="bottom" id="6nb-It-5nk"/>
+                <constraint firstAttribute="trailing" secondItem="Yse-a1-15L" secondAttribute="trailing" id="Eh9-xX-ZOz"/>
+                <constraint firstItem="Yse-a1-15L" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OF3-cO-rMs"/>
+                <constraint firstItem="Yse-a1-15L" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hnx-Ea-SZb"/>
+            </constraints>
+            <size key="customSize" width="378" height="220"/>
+            <connections>
+                <outlet property="cardImage" destination="Yse-a1-15L" id="UUY-WR-w2y"/>
+            </connections>
+            <point key="canvasLocation" x="378.26086956521743" y="146.65178571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="creditcard" catalog="system" width="128" height="88"/>
+    </resources>
+</document>

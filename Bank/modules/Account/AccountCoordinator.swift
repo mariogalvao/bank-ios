@@ -10,41 +10,34 @@ import UIKit
 class AccountCoordinator: Coordinator {
     
     var navigationController = NavigationController()
-    var transactions: [Transaction] = []
+    var menus: [Menu] = []
     
-    init(transactions: [Transaction] = Transaction.getTransactions()) {
-        self.transactions = transactions
+    init(menus: [Menu] = Menu.getAccountMenus()) {
+        self.menus = menus
     }
     
     func firstViewController() -> NavigationController {
         let item = UITabBarItem(title: "Conta", image: UIImage(systemName: "building.columns.fill"), tag: 0)
         let viewController = AccountHomeViewController()
         viewController.tabBarItem = item
-        let viewModel = AccountHomeViewModel(viewControllerDelegate: viewController, coordinatorDelegate: self, transactions: transactions)
+        let viewModel = AccountHomeViewModel(viewControllerDelegate: viewController, coordinatorDelegate: self, menus: menus)
         viewController.viewModelDelegate = viewModel
         navigationController.viewControllers = [viewController]
         return navigationController
-    }
-    
-    private func comingSoon(title: String) {
-        let viewController = ComingSoonViewController()
-        let viewModel = ComingSoonViewModel(viewControllerDelegate: viewController, title: title)
-        viewController.viewModelDelegate = viewModel
-        navigationController.pushViewController(viewController, animated: true)
     }
 
 }
 
 protocol AccountCoordinatorProtocol: CoordinatorProtocol {
     
-    func itemSelected(for transaction: Transaction)
+    func itemSelected(for transaction: Menu)
     
 }
 
 extension AccountCoordinator: AccountCoordinatorProtocol {
     
-    func itemSelected(for transaction: Transaction) {
-        comingSoon(title: transaction.title)
+    func itemSelected(for transaction: Menu) {
+        navigationController.pushViewController(comingSoon(title: transaction.title), animated: true)
     }
     
 }

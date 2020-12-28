@@ -11,52 +11,52 @@ class AccountHomeViewModel: ViewModel {
     
     var viewControllerDelegate: AccountHomeViewControllerProtocol
     var coordinatorDelegate: AccountCoordinatorProtocol
-    var transactions: [Transaction]
-    var filteredTransactions: [Transaction]
+    var menus: [Menu]
+    var filteredMenus: [Menu]
     
-    init(viewControllerDelegate: AccountHomeViewControllerProtocol, coordinatorDelegate: AccountCoordinatorProtocol, transactions: [Transaction]) {
+    init(viewControllerDelegate: AccountHomeViewControllerProtocol, coordinatorDelegate: AccountCoordinatorProtocol, menus: [Menu]) {
         self.viewControllerDelegate = viewControllerDelegate
         self.coordinatorDelegate = coordinatorDelegate
-        self.transactions = transactions
-        self.filteredTransactions = transactions
+        self.menus = menus
+        self.filteredMenus = menus
     }
 
 }
 
 protocol AccountHomeViewModelProtocol: ViewModelProtocol {
     
-    func getNumberOfTransactions() -> Int
-    func getTransaction(for row: Int) -> Transaction?
-    func filterTransactions(by text: String)
-    func selectItem(for transaction: Transaction)
+    func getNumberOfMenus() -> Int
+    func getMenu(for row: Int) -> Menu?
+    func filterMenus(by text: String)
+    func selectItem(for transaction: Menu)
     
 }
 
 extension AccountHomeViewModel: AccountHomeViewModelProtocol {
     
-    func getNumberOfTransactions() -> Int {
-        return filteredTransactions.count
+    func getNumberOfMenus() -> Int {
+        return filteredMenus.count
     }
     
-    func getTransaction(for row: Int) -> Transaction? {
-        if filteredTransactions.count > row {
-            return filteredTransactions[row]
+    func getMenu(for row: Int) -> Menu? {
+        if filteredMenus.count > row {
+            return filteredMenus[row]
         }
         return nil
     }
     
-    func filterTransactions(by text: String) {
+    func filterMenus(by text: String) {
         if text.isEmpty {
-            filteredTransactions = transactions
+            filteredMenus = menus
         } else {
-            filteredTransactions = transactions.filter({ (transaction) -> Bool in
+            filteredMenus = menus.filter({ (transaction) -> Bool in
                 return transaction.title.contains(text) || transaction.details.contains(text)
             })
         }
-        viewControllerDelegate.updateTransactions()
+        viewControllerDelegate.updateMenus()
     }
     
-    func selectItem(for transaction: Transaction) {
+    func selectItem(for transaction: Menu) {
         coordinatorDelegate.itemSelected(for: transaction)
     }
     

@@ -7,6 +7,19 @@
 
 import UIKit
 
-class Coordinator: NSObject {}
+class Coordinator: NSObject {
+    
+    func comingSoon(title: String) -> UIViewController {
+        let viewController = ComingSoonViewController()
+        let viewModel = ComingSoonViewModel(viewControllerDelegate: viewController, title: title)
+        viewController.viewModelDelegate = viewModel
+        return viewController
+    }
+    
+}
 
-protocol CoordinatorProtocol {}
+protocol CoordinatorProtocol {
+    
+    func comingSoon(title: String) -> UIViewController
+    
+}

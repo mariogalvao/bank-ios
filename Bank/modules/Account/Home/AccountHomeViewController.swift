@@ -59,7 +59,7 @@ extension AccountHomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let transaction = viewModelDelegate?.getTransaction(for: indexPath.row) {
+        if let transaction = viewModelDelegate?.getMenu(for: indexPath.row) {
             viewModelDelegate?.selectItem(for: transaction)
         }
     }
@@ -77,7 +77,7 @@ extension AccountHomeViewController: UITableViewDataSource {
         case 0:
             return 1
         case 1:
-            return viewModelDelegate?.getNumberOfTransactions() ?? 0
+            return viewModelDelegate?.getNumberOfMenus() ?? 0
         default:
             return 0
         }
@@ -88,7 +88,7 @@ extension AccountHomeViewController: UITableViewDataSource {
         case 0:
             return getBalanceCell(tableView, cellForRowAt: indexPath)
         case 1:
-            return getTransactionCell(tableView, cellForRowAt: indexPath)
+            return getMenuCell(tableView, cellForRowAt: indexPath)
         default:
             return UITableViewCell()
         }
@@ -102,8 +102,8 @@ extension AccountHomeViewController: UITableViewDataSource {
         return cell
     }
     
-    private func getTransactionCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as? ItemTableViewCell, let transaction = viewModelDelegate?.getTransaction(for: indexPath.row) else {
+    private func getMenuCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as? ItemTableViewCell, let transaction = viewModelDelegate?.getMenu(for: indexPath.row) else {
             return UITableViewCell()
         }
         cell.setUp(icon: transaction.icon, title: transaction.title, details: transaction.details)
@@ -116,20 +116,20 @@ extension AccountHomeViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }
-        viewModelDelegate?.filterTransactions(by: text)
+        viewModelDelegate?.filterMenus(by: text)
     }
     
 }
 
 protocol AccountHomeViewControllerProtocol: ViewControllerProtocol {
     
-    func updateTransactions()
+    func updateMenus()
     
 }
 
 extension AccountHomeViewController: AccountHomeViewControllerProtocol {
     
-    func updateTransactions() {
+    func updateMenus() {
         tableView.reloadData()
     }
     
