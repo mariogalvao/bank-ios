@@ -11,7 +11,7 @@ class CardsHomeViewController: ViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: MenuTableView!
     
     var viewModelDelegate: CardsHomeViewModelProtocol?
 
@@ -27,11 +27,14 @@ class CardsHomeViewController: ViewController {
         pageControl.numberOfPages = viewModelDelegate?.getNumberOfCards() ?? 0
         pageControl.hidesForSinglePage = true
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.menuDelegate = self
         tableView.register(UINib(nibName: "CardInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "CardInfoTableViewCell")
-        tableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemTableViewCell")
-        tableView.register(UINib(nibName: "HeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderView")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModelDelegate?.getMenuSectionList()
     }
 
 }
@@ -72,68 +75,9 @@ extension CardsHomeViewController: UIScrollViewDelegate {
     
 }
 
-extension CardsHomeViewController: UITableViewDelegate {
+extension CardsHomeViewController: MenuTableViewProtocol {
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as? HeaderView else {
-            return nil
-        }
-        switch section {
-        case 0:
-            header.setTitle("Dados do cartão")
-        case 1:
-            header.setTitle("Menu")
-        default:
-            return nil
-        }
-        return header
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let transaction = viewModelDelegate?.getMenu(for: indexPath.row) {
-            viewModelDelegate?.selectItem(for: transaction)
-        }
-    }
-    
-}
-
-extension CardsHomeViewController: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return viewModelDelegate?.getNumberOfMenus() ?? 0
-        default:
-            return 0
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
-            return getCardInfoCell(tableView, cellForRowAt: indexPath)
-        case 1:
-            return getMenuCell(tableView, cellForRowAt: indexPath)
-        default:
-            return UITableViewCell()
-        }
-    }
-    
-    private func getCardInfoCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func getCustomCellForRowAt(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell? {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CardInfoTableViewCell", for: indexPath) as? CardInfoTableViewCell else {
             return UITableViewCell()
         }
@@ -141,16 +85,23 @@ extension CardsHomeViewController: UITableViewDataSource {
         return cell
     }
     
-    private func getMenuCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as? ItemTableViewCell, let transaction = viewModelDelegate?.getMenu(for: indexPath.row) else {
-            return UITableViewCell()
-        }
-        cell.setUp(icon: transaction.icon, title: transaction.title, details: transaction.details)
-        return cell
+    func didSelect(menu: Menu) {
+        viewModelDelegate?.selectItem(for: menu)
     }
     
 }
 
-protocol CardsHomeViewControllerProtocol: ViewControllerProtocol {}
+protocol CardsHomeViewControllerProtocol: ViewControllerProtocol {
+    
+    func updateMenus(_ menus: [MenuSection])
+    
+}
 
-extension CardsHomeViewController: CardsHomeViewControllerProtocol {}
+extension CardsHomeViewController: CardsHomeViewControllerProtocol {
+    
+    func updateMenus(_ menus: [MenuSection]) {
+        tableView.setMenuSectionList(menus)
+        tableView.reloadData()
+    }
+    
+}

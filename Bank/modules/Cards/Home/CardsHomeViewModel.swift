@@ -9,16 +9,14 @@ import UIKit
 
 class CardsHomeViewModel: ViewModel {
     
-    var viewControllerDelegate: CardsHomeViewControllerProtocol
-    var coordinatorDelegate: CardsCoordinatorProtocol
-    var menus: [Menu]
-    var filteredMenus: [Menu]
+    private var viewControllerDelegate: CardsHomeViewControllerProtocol
+    private var coordinatorDelegate: CardsCoordinatorProtocol
+    private var menuSectionList: [MenuSection]
     
-    init(viewControllerDelegate: CardsHomeViewControllerProtocol, coordinatorDelegate: CardsCoordinatorProtocol, menus: [Menu]) {
+    init(viewControllerDelegate: CardsHomeViewControllerProtocol, coordinatorDelegate: CardsCoordinatorProtocol, menuSectionList: [MenuSection] = MenuSection.getCardsMenuSectionList()) {
         self.viewControllerDelegate = viewControllerDelegate
         self.coordinatorDelegate = coordinatorDelegate
-        self.menus = menus
-        self.filteredMenus = menus
+        self.menuSectionList = menuSectionList
     }
 
 }
@@ -26,9 +24,10 @@ class CardsHomeViewModel: ViewModel {
 protocol CardsHomeViewModelProtocol: ViewModelProtocol {
     
     func getNumberOfCards() -> Int
-    func getNumberOfMenus() -> Int
-    func getMenu(for row: Int) -> Menu?
-    func selectItem(for transaction: Menu)
+    func getMenuSectionList()
+//    func getNumberOfMenus() -> Int
+//    func getMenu(for row: Int) -> Menu?
+    func selectItem(for menu: Menu)
     
 }
 
@@ -38,19 +37,23 @@ extension CardsHomeViewModel: CardsHomeViewModelProtocol {
         return 2
     }
     
-    func getNumberOfMenus() -> Int {
-        return filteredMenus.count
+    func getMenuSectionList() {
+        viewControllerDelegate.updateMenus(menuSectionList)
     }
     
-    func getMenu(for row: Int) -> Menu? {
-        if filteredMenus.count > row {
-            return filteredMenus[row]
-        }
-        return nil
-    }
+//    func getNumberOfMenus() -> Int {
+//        return filteredMenus.count
+//    }
+//    
+//    func getMenu(for row: Int) -> Menu? {
+//        if filteredMenus.count > row {
+//            return filteredMenus[row]
+//        }
+//        return nil
+//    }
     
-    func selectItem(for transaction: Menu) {
-        coordinatorDelegate.itemSelected(for: transaction)
+    func selectItem(for menu: Menu) {
+        coordinatorDelegate.itemSelected(for: menu)
     }
     
 }

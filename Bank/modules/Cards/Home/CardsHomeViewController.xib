@@ -48,7 +48,7 @@
                             <color key="pageIndicatorTintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                             <color key="currentPageIndicatorTintColor" name="AccentColor"/>
                         </pageControl>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="SIj-xe-WyR">
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="SIj-xe-WyR" customClass="MenuTableView" customModule="Bank" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="230" width="414" height="588"/>
                         </tableView>
                     </subviews>

@@ -9,55 +9,60 @@ import UIKit
 
 class AccountHomeViewModel: ViewModel {
     
-    var viewControllerDelegate: AccountHomeViewControllerProtocol
-    var coordinatorDelegate: AccountCoordinatorProtocol
-    var menus: [Menu]
-    var filteredMenus: [Menu]
+    private var viewControllerDelegate: AccountHomeViewControllerProtocol
+    private var coordinatorDelegate: AccountCoordinatorProtocol
+    private var menuSectionList: [MenuSection]
     
-    init(viewControllerDelegate: AccountHomeViewControllerProtocol, coordinatorDelegate: AccountCoordinatorProtocol, menus: [Menu]) {
+    init(viewControllerDelegate: AccountHomeViewControllerProtocol, coordinatorDelegate: AccountCoordinatorProtocol, menuSectionList: [MenuSection] = MenuSection.getAccountMenuSectionList()) {
         self.viewControllerDelegate = viewControllerDelegate
         self.coordinatorDelegate = coordinatorDelegate
-        self.menus = menus
-        self.filteredMenus = menus
+        self.menuSectionList = menuSectionList
+    }
+    
+    // Substituir por requisição à API
+    private func getBalance(complete: (Result<String, Error>) -> Void) {
+        complete(.success("1.234,56"))
     }
 
 }
 
 protocol AccountHomeViewModelProtocol: ViewModelProtocol {
     
-    func getNumberOfMenus() -> Int
-    func getMenu(for row: Int) -> Menu?
+    func getBalance()
+    func getMenuSectionList()
     func filterMenus(by text: String)
-    func selectItem(for transaction: Menu)
+    func selectItem(for menu: Menu)
     
 }
 
 extension AccountHomeViewModel: AccountHomeViewModelProtocol {
     
-    func getNumberOfMenus() -> Int {
-        return filteredMenus.count
+    func getBalance() {
+        getBalance { (result) in
+            switch result {
+            case .success(let balance):
+                viewControllerDelegate.setBalance(balance)
+                viewControllerDelegate.updateMenus(menuSectionList)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
-    func getMenu(for row: Int) -> Menu? {
-        if filteredMenus.count > row {
-            return filteredMenus[row]
-        }
-        return nil
+    func getMenuSectionList() {
+        viewControllerDelegate.updateMenus(menuSectionList)
     }
     
     func filterMenus(by text: String) {
-        if text.isEmpty {
-            filteredMenus = menus
-        } else {
-            filteredMenus = menus.filter({ (transaction) -> Bool in
-                return transaction.title.contains(text) || transaction.details.contains(text)
-            })
+        menuSectionList.forEach { (menuSection) in
+            menuSection.filterMenus(by: text) {
+                viewControllerDelegate.updateMenus(menuSectionList)
+            }
         }
-        viewControllerDelegate.updateMenus()
     }
     
-    func selectItem(for transaction: Menu) {
-        coordinatorDelegate.itemSelected(for: transaction)
+    func selectItem(for menu: Menu) {
+        coordinatorDelegate.itemSelected(for: menu)
     }
     
 }

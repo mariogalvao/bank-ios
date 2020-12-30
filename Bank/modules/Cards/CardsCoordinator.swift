@@ -10,17 +10,12 @@ import UIKit
 class CardsCoordinator: Coordinator {
     
     var navigationController = NavigationController()
-    var menus: [Menu] = []
-    
-    init(menus: [Menu] = Menu.getCardMenus()) {
-        self.menus = menus
-    }
     
     func firstViewController() -> NavigationController {
         let item = UITabBarItem(title: "Cartões", image: UIImage(systemName: "creditcard.fill"), tag: 1)
         let viewController = CardsHomeViewController()
         viewController.tabBarItem = item
-        let viewModel = CardsHomeViewModel(viewControllerDelegate: viewController, coordinatorDelegate: self, menus: menus)
+        let viewModel = CardsHomeViewModel(viewControllerDelegate: viewController, coordinatorDelegate: self)
         viewController.viewModelDelegate = viewModel
         let navigationController = NavigationController()
         navigationController.viewControllers = [viewController]
