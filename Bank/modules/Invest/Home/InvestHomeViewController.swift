@@ -9,16 +9,82 @@ import UIKit
 
 class InvestHomeViewController: ViewController {
     
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var tableView: MenuTableView!
+    
     var viewModelDelegate: InvestHomeViewModelProtocol?
+    
+    private var balance: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Investimentos"
+        
+        tableView.menuDelegate = self
+        tableView.register(UINib(nibName: "BalanceTableViewCell", bundle: nil), forCellReuseIdentifier: "BalanceTableViewCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModelDelegate?.getBalance()
+        selectData()
+    }
+    
+    private func getBalanceCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BalanceTableViewCell", for: indexPath) as? BalanceTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.setUp(balance: balance, visible: true)
+        return cell
+    }
+    
+    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        selectData()
+    }
+    
+    private func selectData() {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            viewModelDelegate?.getMyInvest()
+        case 1:
+            viewModelDelegate?.getInvest()
+        default:
+            break
+        }
     }
 
 }
 
-protocol InvestHomeViewControllerProtocol: ViewControllerProtocol {}
+extension InvestHomeViewController: MenuTableViewProtocol {
+    
+    func getCustomCellForRowAt(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell? {
+        return getBalanceCell(tableView, cellForRowAt: indexPath)
+    }
+    
+    func didSelect(menu: Menu) {
+        viewModelDelegate?.selectItem(for: menu)
+    }
+    
+}
 
-extension InvestHomeViewController: InvestHomeViewControllerProtocol {}
+protocol InvestHomeViewControllerProtocol: ViewControllerProtocol {
+    
+    func setBalance(_ balance: String)
+    func updateMenus(_ menus: [MenuSection])
+    
+}
+
+extension InvestHomeViewController: InvestHomeViewControllerProtocol {
+    
+    func setBalance(_ balance: String) {
+        self.balance = balance
+    }
+    
+    func updateMenus(_ menus: [MenuSection]) {
+        tableView.setMenuSectionList(menus)
+        tableView.reloadData()
+    }
+    
+}

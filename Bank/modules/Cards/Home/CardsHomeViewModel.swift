@@ -25,8 +25,6 @@ protocol CardsHomeViewModelProtocol: ViewModelProtocol {
     
     func getNumberOfCards() -> Int
     func getMenuSectionList()
-//    func getNumberOfMenus() -> Int
-//    func getMenu(for row: Int) -> Menu?
     func selectItem(for menu: Menu)
     
 }
@@ -40,17 +38,6 @@ extension CardsHomeViewModel: CardsHomeViewModelProtocol {
     func getMenuSectionList() {
         viewControllerDelegate.updateMenus(menuSectionList)
     }
-    
-//    func getNumberOfMenus() -> Int {
-//        return filteredMenus.count
-//    }
-//    
-//    func getMenu(for row: Int) -> Menu? {
-//        if filteredMenus.count > row {
-//            return filteredMenus[row]
-//        }
-//        return nil
-//    }
     
     func selectItem(for menu: Menu) {
         coordinatorDelegate.itemSelected(for: menu)

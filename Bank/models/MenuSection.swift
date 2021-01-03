@@ -49,6 +49,22 @@ class MenuSection {
                                       menus: Menu.getCardMenus())
         return [customSection, menuSection]
     }
+    
+    static func getMyInvestMenuSectionList() -> [MenuSection] {
+        let customSection = MenuSection(sectionTitle: "Total investido",
+                                        type: .customCell)
+        let menuSection = MenuSection(sectionTitle: "Meus investimentos",
+                                      type: .menu,
+                                      menus: Menu.getMyInvestMenus())
+        return [customSection, menuSection]
+    }
+    
+    static func getInvestMenuSectionList() -> [MenuSection] {
+        let menuSection = MenuSection(sectionTitle: "Investimentos disponíveis",
+                                      type: .menu,
+                                      menus: Menu.getInvestMenus())
+        return [menuSection]
+    }
 
 }
 

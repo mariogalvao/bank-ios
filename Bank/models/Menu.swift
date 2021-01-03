@@ -14,7 +14,7 @@ class Menu {
     var title: String
     var details: String
     
-    init(type: MenuType, icon: UIImage?, title: String, details: String) {
+    init(type: MenuType, icon: UIImage? = nil, title: String, details: String) {
         self.type = type
         self.icon = icon
         self.title = title
@@ -66,6 +66,48 @@ class Menu {
                                         details: "Em caso de perda ou roubo, faça o bloqueio do seu cartão."))
         return transactions
     }
+    
+    static func getMyInvestMenus() -> [Menu] {
+        var transactions: [Menu] = []
+        transactions.append(Menu(type: .invest,
+                                 icon: UIImage(systemName: "centsign.circle"),
+                                 title: "Poupança",
+                                 details: "RS 5.000,00"))
+        transactions.append(Menu(type: .invest,
+                                 icon: UIImage(systemName: "banknote"),
+                                 title: "Renda fixa",
+                                 details: "R$ 10.000,00"))
+        transactions.append(Menu(type: .invest,
+                                 icon: UIImage(systemName: "arrow.up.right.square"),
+                                 title: "Ações",
+                                 details: "R$ 15.000,00"))
+        return transactions
+    }
+    
+    static func getInvestMenus() -> [Menu] {
+        var transactions: [Menu] = []
+        transactions.append(Menu(type: .invest,
+                                 icon: UIImage(systemName: "centsign.circle"),
+                                 title: "Poupança",
+                                 details: "O mais seguro de todos os investimentos."))
+        transactions.append(Menu(type: .invest,
+                                 icon: UIImage(systemName: "banknote"),
+                                 title: "Renda fixa",
+                                 details: "Veja as opções de renda fixa que mais se adequam ao seu perfil."))
+        transactions.append(Menu(type: .invest,
+                                 icon: UIImage(systemName: "arrow.up.right.square"),
+                                 title: "Ações",
+                                 details: "Home Broker completo, zero tarifas."))
+        transactions.append(Menu(type: .invest,
+                                 icon: UIImage(systemName: "building.2"),
+                                 title: "Debêntures",
+                                 details: "Faça empréstimos a boas taxas de juros a grandes empresas."))
+        transactions.append(Menu(type: .invest,
+                                 icon: UIImage(systemName: "house"),
+                                 title: "Fundo imobiliário",
+                                 details: "Cada fundo investe em um grupo de bens imobiliários para vender em um determinado prazo."))
+        return transactions
+    }
 
 }
 
@@ -79,4 +121,5 @@ enum MenuType: String {
     case invoice
     case limits
     case block
+    case invest
 }

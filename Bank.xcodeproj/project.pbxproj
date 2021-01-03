@@ -301,8 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				D590C2BB25963DA500B833E3 /* InvestHomeViewController.swift */,
-				D590C2BC25963DA500B833E3 /* InvestHomeViewModel.swift */,
 				D590C2BD25963DA500B833E3 /* InvestHomeViewController.xib */,
+				D590C2BC25963DA500B833E3 /* InvestHomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
