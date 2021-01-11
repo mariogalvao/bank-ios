@@ -1,6 +1,6 @@
 # AccountAPI
 
-All URIs are relative to *http://demo7475691.mockable.io/v1*
+All URIs are relative to *http://demo7257567.mockable.io/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

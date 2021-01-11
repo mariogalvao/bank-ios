@@ -10,10 +10,12 @@ import OpenAPIClient
 
 class ProfileHomeViewController: ViewController {
     
+    @IBOutlet weak var personActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var cpfLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var bankActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var bankLabel: UILabel!
     @IBOutlet weak var agencyLabel: UILabel!
     @IBOutlet weak var accountLabel: UILabel!
@@ -24,6 +26,8 @@ class ProfileHomeViewController: ViewController {
         super.viewDidLoad()
 
         title = "Perfil"
+        
+        setLabelsVisible(false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +42,15 @@ class ProfileHomeViewController: ViewController {
     
     @IBAction func logout(_ sender: UIButton) {
         viewModelDelegate?.logout()
+    }
+    
+    private func setLabelsVisible(_ visible: Bool) {
+        [personActivityIndicator, bankActivityIndicator].forEach { (activityIndicator) in
+            activityIndicator?.isHidden = visible
+        }
+        [nameLabel, emailLabel, cpfLabel, phoneLabel, bankLabel, agencyLabel, accountLabel].forEach { (label) in
+            label?.isHidden = !visible
+        }
     }
     
 }
@@ -58,6 +71,7 @@ extension ProfileHomeViewController: ProfileHomeViewControllerProtocol {
         bankLabel.text = "Banco: \(myInfo.bank)"
         agencyLabel.text = "Agência: \(myInfo.agency)"
         accountLabel.text = "Conta: \(myInfo.account)"
+        setLabelsVisible(true)
     }
     
 }
