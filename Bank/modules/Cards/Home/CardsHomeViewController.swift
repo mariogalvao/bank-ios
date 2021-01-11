@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OpenAPIClient
 
 class CardsHomeViewController: ViewController {
     
@@ -23,10 +24,7 @@ class CardsHomeViewController: ViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CardCollectionViewCell")
-        
-        pageControl.numberOfPages = viewModelDelegate?.getNumberOfCards() ?? 0
-        pageControl.hidesForSinglePage = true
-        
+                
         tableView.menuDelegate = self
         tableView.register(UINib(nibName: "CardInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "CardInfoTableViewCell")
     }
@@ -34,9 +32,10 @@ class CardsHomeViewController: ViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        viewModelDelegate?.getCards()
         viewModelDelegate?.getMenuSectionList()
     }
-
+    
 }
 
 extension CardsHomeViewController: UICollectionViewDelegate {}
@@ -44,7 +43,9 @@ extension CardsHomeViewController: UICollectionViewDelegate {}
 extension CardsHomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModelDelegate?.getNumberOfCards() ?? 0
+        let numberOfCards = viewModelDelegate?.getNumberOfCards() ?? 0
+        pageControl.numberOfPages = numberOfCards
+        return numberOfCards
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -70,6 +71,7 @@ extension CardsHomeViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == collectionView {
             pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+            tableView.reloadData()
         }
     }
     
@@ -81,7 +83,11 @@ extension CardsHomeViewController: MenuTableViewProtocol {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CardInfoTableViewCell", for: indexPath) as? CardInfoTableViewCell else {
             return UITableViewCell()
         }
-        
+        guard let card = viewModelDelegate?.getCard(for: pageControl.currentPage) else { return nil }
+        cell.cardLabel.text = card.name
+        cell.spentLabel.text = card.spentString
+        cell.availableLabel.text = card.availableString
+        cell.setLimits(spentValue: card.spentValue, availableValue: card.availableValue)
         return cell
     }
     
@@ -94,6 +100,7 @@ extension CardsHomeViewController: MenuTableViewProtocol {
 protocol CardsHomeViewControllerProtocol: ViewControllerProtocol {
     
     func updateMenus(_ menus: [MenuSection])
+    func reloadData()
     
 }
 
@@ -101,6 +108,11 @@ extension CardsHomeViewController: CardsHomeViewControllerProtocol {
     
     func updateMenus(_ menus: [MenuSection]) {
         tableView.setMenuSectionList(menus)
+        tableView.reloadData()
+    }
+    
+    func reloadData() {
+        collectionView.reloadData()
         tableView.reloadData()
     }
     

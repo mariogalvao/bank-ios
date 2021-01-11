@@ -9,15 +9,13 @@ import UIKit
 
 class CardInfoTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var cardLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var spentLabel: UILabel!
+    @IBOutlet weak var availableLabel: UILabel!
+    
+    func setLimits(spentValue: Double, availableValue: Double) {
+        progressView.progress = Float(spentValue / (spentValue + availableValue))
     }
     
 }

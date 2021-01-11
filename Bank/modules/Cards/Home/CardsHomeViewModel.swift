@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import OpenAPIClient
 
 class CardsHomeViewModel: ViewModel {
     
     private var viewControllerDelegate: CardsHomeViewControllerProtocol
     private var coordinatorDelegate: CardsCoordinatorProtocol
     private var menuSectionList: [MenuSection]
+    private var cards: [Card] = []
     
     init(viewControllerDelegate: CardsHomeViewControllerProtocol, coordinatorDelegate: CardsCoordinatorProtocol, menuSectionList: [MenuSection] = MenuSection.getCardsMenuSectionList()) {
         self.viewControllerDelegate = viewControllerDelegate
@@ -23,6 +25,8 @@ class CardsHomeViewModel: ViewModel {
 
 protocol CardsHomeViewModelProtocol: ViewModelProtocol {
     
+    func getCards()
+    func getCard(for row: Int) -> Card?
     func getNumberOfCards() -> Int
     func getMenuSectionList()
     func selectItem(for menu: Menu)
@@ -31,8 +35,28 @@ protocol CardsHomeViewModelProtocol: ViewModelProtocol {
 
 extension CardsHomeViewModel: CardsHomeViewModelProtocol {
     
+    func getCards() {
+        cardsAPI.getCards { (result) in
+            switch result {
+            case .success(let cards):
+                self.cards = cards
+                self.viewControllerDelegate.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getCard(for row: Int) -> Card? {
+        if cards.count > row {
+            return cards[row]
+        } else {
+            return nil
+        }
+    }
+    
     func getNumberOfCards() -> Int {
-        return 2
+        return cards.count
     }
     
     func getMenuSectionList() {

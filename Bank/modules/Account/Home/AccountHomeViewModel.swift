@@ -18,11 +18,6 @@ class AccountHomeViewModel: ViewModel {
         self.coordinatorDelegate = coordinatorDelegate
         self.menuSectionList = menuSectionList
     }
-    
-    // Substituir por requisição à API
-    private func getBalance(complete: (Result<String, Error>) -> Void) {
-        complete(.success("1.234,56"))
-    }
 
 }
 
@@ -38,11 +33,11 @@ protocol AccountHomeViewModelProtocol: ViewModelProtocol {
 extension AccountHomeViewModel: AccountHomeViewModelProtocol {
     
     func getBalance() {
-        getBalance { (result) in
+        accountAPI.getBalance { (result) in
             switch result {
             case .success(let balance):
-                viewControllerDelegate.setBalance(balance)
-                viewControllerDelegate.updateMenus(menuSectionList)
+                self.viewControllerDelegate.setBalance(balance.balanceString)
+                self.viewControllerDelegate.updateMenus(self.menuSectionList)
             case .failure(let error):
                 print(error.localizedDescription)
             }

@@ -17,7 +17,7 @@ class CardsCoordinator: Coordinator {
         viewController.tabBarItem = item
         let viewModel = CardsHomeViewModel(viewControllerDelegate: viewController, coordinatorDelegate: self)
         viewController.viewModelDelegate = viewModel
-        let navigationController = NavigationController()
+        navigationController = NavigationController()
         navigationController.viewControllers = [viewController]
         return navigationController
     }

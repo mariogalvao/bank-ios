@@ -28,7 +28,6 @@ class InvestHomeViewController: ViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        viewModelDelegate?.getBalance()
         selectData()
     }
     

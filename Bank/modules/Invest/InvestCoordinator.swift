@@ -24,7 +24,7 @@ class InvestCoordinator: Coordinator {
 
 }
 
-protocol InvestCoordinatorProtocol {
+protocol InvestCoordinatorProtocol: CoordinatorProtocol {
     
     func itemSelected(for transaction: Menu)
     

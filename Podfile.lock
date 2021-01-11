@@ -1,0 +1,16 @@
+PODS:
+  - OpenAPIClient (1.0.0)
+
+DEPENDENCIES:
+  - OpenAPIClient (from `./BankAPI`)
+
+EXTERNAL SOURCES:
+  OpenAPIClient:
+    :path: "./BankAPI"
+
+SPEC CHECKSUMS:
+  OpenAPIClient: 9463e074f7c19fecf6c3f9c0e565dd58aab45aa5
+
+PODFILE CHECKSUM: 84706cf882f3e322a1faf161ca1fd115f5c59658
+
+COCOAPODS: 1.9.3

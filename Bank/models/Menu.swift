@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OpenAPIClient
 
 class Menu {
     
@@ -67,46 +68,28 @@ class Menu {
         return transactions
     }
     
-    static func getMyInvestMenus() -> [Menu] {
-        var transactions: [Menu] = []
-        transactions.append(Menu(type: .invest,
-                                 icon: UIImage(systemName: "centsign.circle"),
-                                 title: "Poupança",
-                                 details: "RS 5.000,00"))
-        transactions.append(Menu(type: .invest,
-                                 icon: UIImage(systemName: "banknote"),
-                                 title: "Renda fixa",
-                                 details: "R$ 10.000,00"))
-        transactions.append(Menu(type: .invest,
-                                 icon: UIImage(systemName: "arrow.up.right.square"),
-                                 title: "Ações",
-                                 details: "R$ 15.000,00"))
-        return transactions
+    static func getMyInvestMenus(for myInvestments: [MyInvestment]) -> [Menu] {
+        var menus: [Menu] = []
+        myInvestments.forEach { (myInvestment) in
+            let menu = Menu(type: .invest,
+                            icon: UIImage(systemName: myInvestment.iOSImage),
+                            title: myInvestment.name,
+                            details: myInvestment.balanceString)
+            menus.append(menu)
+        }
+        return menus
     }
     
-    static func getInvestMenus() -> [Menu] {
-        var transactions: [Menu] = []
-        transactions.append(Menu(type: .invest,
-                                 icon: UIImage(systemName: "centsign.circle"),
-                                 title: "Poupança",
-                                 details: "O mais seguro de todos os investimentos."))
-        transactions.append(Menu(type: .invest,
-                                 icon: UIImage(systemName: "banknote"),
-                                 title: "Renda fixa",
-                                 details: "Veja as opções de renda fixa que mais se adequam ao seu perfil."))
-        transactions.append(Menu(type: .invest,
-                                 icon: UIImage(systemName: "arrow.up.right.square"),
-                                 title: "Ações",
-                                 details: "Home Broker completo, zero tarifas."))
-        transactions.append(Menu(type: .invest,
-                                 icon: UIImage(systemName: "building.2"),
-                                 title: "Debêntures",
-                                 details: "Faça empréstimos a boas taxas de juros a grandes empresas."))
-        transactions.append(Menu(type: .invest,
-                                 icon: UIImage(systemName: "house"),
-                                 title: "Fundo imobiliário",
-                                 details: "Cada fundo investe em um grupo de bens imobiliários para vender em um determinado prazo."))
-        return transactions
+    static func getInvestMenus(for investments: [Investment]) -> [Menu] {
+        var menus: [Menu] = []
+        investments.forEach { (myInvestment) in
+            let menu = Menu(type: .invest,
+                            icon: UIImage(systemName: myInvestment.iOSImage),
+                            title: myInvestment.name,
+                            details: myInvestment.description)
+            menus.append(menu)
+        }
+        return menus
     }
 
 }

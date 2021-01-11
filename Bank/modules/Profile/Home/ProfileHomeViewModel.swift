@@ -6,17 +6,47 @@
 //
 
 import UIKit
+import OpenAPIClient
 
 class ProfileHomeViewModel: ViewModel {
     
-    var viewControllerDelegate: ProfileHomeViewControllerProtocol
+    private var viewControllerDelegate: ProfileHomeViewControllerProtocol
+    private var coordinatorDelegate: ProfileCoordinatorProtocol
     
-    init(viewControllerDelegate: ProfileHomeViewControllerProtocol) {
+    init(viewControllerDelegate: ProfileHomeViewControllerProtocol, coordinatorDelegate: ProfileCoordinatorProtocol) {
         self.viewControllerDelegate = viewControllerDelegate
+        self.coordinatorDelegate = coordinatorDelegate
     }
 
 }
 
-protocol ProfileHomeViewModelProtocol: ViewModelProtocol {}
+protocol ProfileHomeViewModelProtocol: ViewModelProtocol {
+    
+    func getMyInfo()
+    func needHelp()
+    func logout()
+    
+}
 
-extension ProfileHomeViewModel: ProfileHomeViewModelProtocol {}
+extension ProfileHomeViewModel: ProfileHomeViewModelProtocol {
+    
+    func getMyInfo() {
+        accountAPI.getMyInfo { (result) in
+            switch result {
+            case .success(let myInfo):
+                self.viewControllerDelegate.setMyInfo(myInfo)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func needHelp() {
+        coordinatorDelegate.support()
+    }
+    
+    func logout() {
+        coordinatorDelegate.logout()
+    }
+    
+}

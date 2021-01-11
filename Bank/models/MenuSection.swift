@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OpenAPIClient
 
 class MenuSection {
     
@@ -50,19 +51,19 @@ class MenuSection {
         return [customSection, menuSection]
     }
     
-    static func getMyInvestMenuSectionList() -> [MenuSection] {
+    static func getMyInvestMenuSectionList(for myInvestments: [MyInvestment]) -> [MenuSection] {
         let customSection = MenuSection(sectionTitle: "Total investido",
                                         type: .customCell)
         let menuSection = MenuSection(sectionTitle: "Meus investimentos",
                                       type: .menu,
-                                      menus: Menu.getMyInvestMenus())
+                                      menus: Menu.getMyInvestMenus(for: myInvestments))
         return [customSection, menuSection]
     }
     
-    static func getInvestMenuSectionList() -> [MenuSection] {
+    static func getInvestMenuSectionList(for investments: [Investment]) -> [MenuSection] {
         let menuSection = MenuSection(sectionTitle: "Investimentos disponíveis",
                                       type: .menu,
-                                      menus: Menu.getInvestMenus())
+                                      menus: Menu.getInvestMenus(for: investments))
         return [menuSection]
     }
 

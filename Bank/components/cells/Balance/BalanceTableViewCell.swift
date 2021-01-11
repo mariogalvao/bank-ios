@@ -10,9 +10,15 @@ import UIKit
 class BalanceTableViewCell: UITableViewCell {
 
     @IBOutlet weak var balanceLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var visibleButton: UIButton!
     
-    private var balance: String = ""
+    private var balance: String = "" {
+        didSet {
+            balanceLabel.isHidden = balance.isEmpty
+            activityIndicator.isHidden = !balance.isEmpty
+        }
+    }
     private var visible: Bool = false {
         didSet {
             update()
