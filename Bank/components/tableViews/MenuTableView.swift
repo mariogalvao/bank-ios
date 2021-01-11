@@ -45,7 +45,7 @@ extension MenuTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let menuSection = self.menuSection,
            menuSection.menus?.count ?? 0 > indexPath.row {
-            menuDelegate?.didSelect(menu: menuSection.menus![indexPath.row])
+            menuDelegate?.didSelect(menu: menuSection.filteredMenus![indexPath.row])
         }
     }
 
