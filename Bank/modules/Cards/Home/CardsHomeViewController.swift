@@ -10,6 +10,7 @@ import OpenAPIClient
 
 class CardsHomeViewController: ViewController {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var tableView: MenuTableView!
@@ -27,13 +28,21 @@ class CardsHomeViewController: ViewController {
                 
         tableView.menuDelegate = self
         tableView.register(UINib(nibName: "CardInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "CardInfoTableViewCell")
+        
+        setViewsVisible(false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         viewModelDelegate?.getCards()
-        viewModelDelegate?.getMenuSectionList()
+    }
+    
+    private func setViewsVisible(_ visible: Bool) {
+        activityIndicator.isHidden = visible
+        [collectionView, pageControl, tableView].forEach { (view) in
+            view?.isHidden = !visible
+        }
     }
     
 }
@@ -100,18 +109,14 @@ extension CardsHomeViewController: MenuTableViewProtocol {
 protocol CardsHomeViewControllerProtocol: ViewControllerProtocol {
     
     func updateMenus(_ menus: [MenuSection])
-    func reloadData()
     
 }
 
 extension CardsHomeViewController: CardsHomeViewControllerProtocol {
     
     func updateMenus(_ menus: [MenuSection]) {
+        setViewsVisible(true)
         tableView.setMenuSectionList(menus)
-        tableView.reloadData()
-    }
-    
-    func reloadData() {
         collectionView.reloadData()
         tableView.reloadData()
     }

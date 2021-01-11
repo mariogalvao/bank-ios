@@ -9,6 +9,8 @@ import UIKit
 
 class InvestHomeViewController: ViewController {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var stackViewSegmentedControl: UIStackView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: MenuTableView!
     
@@ -23,6 +25,8 @@ class InvestHomeViewController: ViewController {
         
         tableView.menuDelegate = self
         tableView.register(UINib(nibName: "BalanceTableViewCell", bundle: nil), forCellReuseIdentifier: "BalanceTableViewCell")
+        
+        activityIndicator.startAnimating()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +48,7 @@ class InvestHomeViewController: ViewController {
     }
     
     private func selectData() {
+        activityIndicator.startAnimating()
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             viewModelDelegate?.getMyInvest()
@@ -84,6 +89,7 @@ extension InvestHomeViewController: InvestHomeViewControllerProtocol {
     func updateMenus(_ menus: [MenuSection]) {
         tableView.setMenuSectionList(menus)
         tableView.reloadData()
+        activityIndicator.stopAnimating()
     }
     
 }

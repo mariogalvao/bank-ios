@@ -28,7 +28,6 @@ protocol CardsHomeViewModelProtocol: ViewModelProtocol {
     func getCards()
     func getCard(for row: Int) -> Card?
     func getNumberOfCards() -> Int
-    func getMenuSectionList()
     func selectItem(for menu: Menu)
     
 }
@@ -40,7 +39,7 @@ extension CardsHomeViewModel: CardsHomeViewModelProtocol {
             switch result {
             case .success(let cards):
                 self.cards = cards
-                self.viewControllerDelegate.reloadData()
+                self.viewControllerDelegate.updateMenus(self.menuSectionList)
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -57,10 +56,6 @@ extension CardsHomeViewModel: CardsHomeViewModelProtocol {
     
     func getNumberOfCards() -> Int {
         return cards.count
-    }
-    
-    func getMenuSectionList() {
-        viewControllerDelegate.updateMenus(menuSectionList)
     }
     
     func selectItem(for menu: Menu) {
