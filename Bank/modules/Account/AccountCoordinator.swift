@@ -9,8 +9,6 @@ import UIKit
 
 class AccountCoordinator: Coordinator {
     
-    var navigationController = NavigationController()
-    
     func firstViewController() -> NavigationController {
         let item = UITabBarItem(title: "Conta", image: UIImage(systemName: "building.columns.fill"), tag: 0)
         let viewController = AccountHomeViewController()

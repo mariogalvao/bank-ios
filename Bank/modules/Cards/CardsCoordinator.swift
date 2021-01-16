@@ -8,9 +8,7 @@
 import UIKit
 
 class CardsCoordinator: Coordinator {
-    
-    var navigationController = NavigationController()
-    
+        
     func firstViewController() -> NavigationController {
         let item = UITabBarItem(title: "Cartões", image: UIImage(systemName: "creditcard.fill"), tag: 1)
         let viewController = CardsHomeViewController()

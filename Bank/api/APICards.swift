@@ -14,7 +14,7 @@ protocol APICardsProtocol: APIProtocol {
     
 }
 
-class APICards: API {
+class APICards: API, APICardsProtocol {
     
     func getCards(completion: @escaping (Result<[Card], APIError>) -> Void) {
         CardsAPI.getMyCards { (response, error) in

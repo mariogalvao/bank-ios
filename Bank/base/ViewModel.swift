@@ -9,13 +9,13 @@ import UIKit
 
 class ViewModel {
     
-    var accountAPI: APIAccount
-    var cardsAPI: APICards
-    var investAPI: APIInvestments
+    var accountAPI: APIAccountProtocol
+    var cardsAPI: APICardsProtocol
+    var investAPI: APIInvestmentsProtocol
     
-    init(accountAPI: APIAccount = APIAccount(),
-         cardsAPI: APICards = APICards(),
-         investAPI: APIInvestments = APIInvestments()) {
+    init(accountAPI: APIAccountProtocol = APIAccount(),
+         cardsAPI: APICardsProtocol = APICards(),
+         investAPI: APIInvestmentsProtocol = APIInvestments()) {
         self.accountAPI = accountAPI
         self.cardsAPI = cardsAPI
         self.investAPI = investAPI

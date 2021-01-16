@@ -15,12 +15,36 @@
 		D543C87325AB9BA500B93C54 /* APIAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C87225AB9BA500B93C54 /* APIAccount.swift */; };
 		D543C88D25ABA91B00B93C54 /* APICards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C88C25ABA91B00B93C54 /* APICards.swift */; };
 		D543C8A025ABAAFE00B93C54 /* APIInvest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C89F25ABAAFE00B93C54 /* APIInvest.swift */; };
+		D55AA51625B311090078B9FC /* TabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA51525B311090078B9FC /* TabBarControllerTests.swift */; };
+		D55AA51B25B3143B0078B9FC /* NavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA51A25B3143B0078B9FC /* NavigationControllerTests.swift */; };
+		D55AA52025B317AA0078B9FC /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA51F25B317AA0078B9FC /* CoordinatorTests.swift */; };
+		D55AA52525B319230078B9FC /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA52425B319230078B9FC /* ViewModelTests.swift */; };
+		D55AA52C25B3198B0078B9FC /* APIAccountMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA52B25B3198B0078B9FC /* APIAccountMock.swift */; };
+		D55AA53725B31B000078B9FC /* BalanceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA53625B31B000078B9FC /* BalanceMock.swift */; };
+		D55AA53F25B31BFA0078B9FC /* APIErrorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA53E25B31BFA0078B9FC /* APIErrorMock.swift */; };
+		D55AA54425B31C660078B9FC /* MyInfoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA54325B31C660078B9FC /* MyInfoMock.swift */; };
+		D55AA54C25B31D5D0078B9FC /* APICardsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA54B25B31D5D0078B9FC /* APICardsMock.swift */; };
+		D55AA55125B31DAD0078B9FC /* CardsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA55025B31DAD0078B9FC /* CardsMock.swift */; };
+		D55AA55625B31EFC0078B9FC /* APIInvestmentsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA55525B31EFC0078B9FC /* APIInvestmentsMock.swift */; };
+		D55AA55B25B31F450078B9FC /* MyInvestmentsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA55A25B31F450078B9FC /* MyInvestmentsMock.swift */; };
+		D55AA56325B320FC0078B9FC /* InvestmentsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA56225B320FC0078B9FC /* InvestmentsMock.swift */; };
+		D55AA57125B323820078B9FC /* ComingSoonViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA57025B323820078B9FC /* ComingSoonViewControllerTests.swift */; };
+		D55AA57A25B331BB0078B9FC /* ComingSoonViewModelProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA57925B331BB0078B9FC /* ComingSoonViewModelProtocolMock.swift */; };
+		D55AA58225B3328A0078B9FC /* ComingSoonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA58125B3328A0078B9FC /* ComingSoonViewModelTests.swift */; };
+		D55AA58725B332DA0078B9FC /* ComingSoonViewControllerProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55AA58625B332DA0078B9FC /* ComingSoonViewControllerProtocolMock.swift */; };
+		D565EF1F25B362C900B84137 /* AccountCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF1E25B362C900B84137 /* AccountCoordinatorTests.swift */; };
+		D565EF2525B3653700B84137 /* NavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF2425B3653700B84137 /* NavigationControllerMock.swift */; };
+		D565EF3125B3695B00B84137 /* CardsCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF2C25B3695B00B84137 /* CardsCoordinatorTests.swift */; };
+		D565EF3225B3695B00B84137 /* CardsHomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF2D25B3695B00B84137 /* CardsHomeViewControllerTests.swift */; };
+		D565EF3325B3695B00B84137 /* CardsHomeViewControllerProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF2E25B3695B00B84137 /* CardsHomeViewControllerProtocolMock.swift */; };
+		D565EF3425B3695B00B84137 /* CardsHomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF2F25B3695B00B84137 /* CardsHomeViewModelTests.swift */; };
+		D565EF3525B3695B00B84137 /* CardsHomeViewModelProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF3025B3695B00B84137 /* CardsHomeViewModelProtocolMock.swift */; };
+		D565EF4325B36A5D00B84137 /* CardsCoordinatorProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D565EF4225B36A5D00B84137 /* CardsCoordinatorProtocolMock.swift */; };
 		D590C219259623C900B833E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C218259623C900B833E3 /* AppDelegate.swift */; };
 		D590C21B259623C900B833E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C21A259623C900B833E3 /* SceneDelegate.swift */; };
 		D590C21D259623C900B833E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C21C259623C900B833E3 /* ViewController.swift */; };
 		D590C222259623CA00B833E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D590C221259623CA00B833E3 /* Assets.xcassets */; };
 		D590C225259623CA00B833E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D590C223259623CA00B833E3 /* LaunchScreen.storyboard */; };
-		D590C230259623CA00B833E3 /* BankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C22F259623CA00B833E3 /* BankTests.swift */; };
 		D590C23B259623CA00B833E3 /* BankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C23A259623CA00B833E3 /* BankUITests.swift */; };
 		D590C258259625DC00B833E3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C257259625DC00B833E3 /* TabBarController.swift */; };
 		D590C25D2596266200B833E3 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C25C2596266200B833E3 /* NavigationController.swift */; };
@@ -53,11 +77,39 @@
 		D590C3692597C85700B833E3 /* ComingSoonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D590C3662597C85700B833E3 /* ComingSoonViewController.xib */; };
 		D590C3822598D06200B833E3 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C3802598D06200B833E3 /* CardCollectionViewCell.swift */; };
 		D590C3832598D06200B833E3 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D590C3812598D06200B833E3 /* CardCollectionViewCell.xib */; };
-		D590C38C2599501400B833E3 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C38B2599501400B833E3 /* MenuButton.swift */; };
 		D590C396259957CD00B833E3 /* CardInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C394259957CD00B833E3 /* CardInfoTableViewCell.swift */; };
 		D590C397259957CD00B833E3 /* CardInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D590C395259957CD00B833E3 /* CardInfoTableViewCell.xib */; };
 		D590C3A9259CB22000B833E3 /* MenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C3A8259CB22000B833E3 /* MenuTableView.swift */; };
 		D590C3AE259CB4B700B833E3 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590C3AD259CB4B700B833E3 /* MenuSection.swift */; };
+		D5B8F44C25B337C5009E9AA6 /* ItemTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B8F44B25B337C5009E9AA6 /* ItemTableViewCellTests.swift */; };
+		D5B8F45525B34902009E9AA6 /* BalanceTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B8F45425B34902009E9AA6 /* BalanceTableViewCellTests.swift */; };
+		D5B8F45E25B34B81009E9AA6 /* CardTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B8F45D25B34B81009E9AA6 /* CardTableViewCellTests.swift */; };
+		D5BA0C4C25B34E9F00AE4682 /* CardInfoTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0C4B25B34E9F00AE4682 /* CardInfoTableViewCellTests.swift */; };
+		D5BA0C5525B34F5C00AE4682 /* MenuTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0C5425B34F5C00AE4682 /* MenuTableViewTests.swift */; };
+		D5BA0C6125B3504C00AE4682 /* MenuSectionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0C6025B3504C00AE4682 /* MenuSectionMock.swift */; };
+		D5BA0C6625B3506100AE4682 /* MenuMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0C6525B3506100AE4682 /* MenuMock.swift */; };
+		D5BA0C6C25B3524100AE4682 /* MenuTableViewProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0C6B25B3524100AE4682 /* MenuTableViewProtocolMock.swift */; };
+		D5BA0C7425B3557F00AE4682 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0C7325B3557F00AE4682 /* APITests.swift */; };
+		D5BA0C7925B3582000AE4682 /* APIErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0C7825B3582000AE4682 /* APIErrorTest.swift */; };
+		D5BA0C8125B358B000AE4682 /* ModelErrorResponseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0C8025B358B000AE4682 /* ModelErrorResponseMock.swift */; };
+		D5BA0CAA25B35A4E00AE4682 /* AccountHomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0CA625B35A4E00AE4682 /* AccountHomeViewControllerTests.swift */; };
+		D5BA0CAB25B35A4E00AE4682 /* AccountHomeViewControllerProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0CA725B35A4E00AE4682 /* AccountHomeViewControllerProtocolMock.swift */; };
+		D5BA0CAC25B35A4E00AE4682 /* AccountHomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0CA825B35A4E00AE4682 /* AccountHomeViewModelTests.swift */; };
+		D5BA0CAD25B35A4E00AE4682 /* AccountHomeViewModelProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0CA925B35A4E00AE4682 /* AccountHomeViewModelProtocolMock.swift */; };
+		D5BA0CB625B35B8800AE4682 /* AccountCoordinatorProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA0CB525B35B8800AE4682 /* AccountCoordinatorProtocolMock.swift */; };
+		D5C0A85D25B3718200BADF2A /* CardMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A85C25B3718200BADF2A /* CardMock.swift */; };
+		D5C0A86725B37A1C00BADF2A /* InvestCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A86125B37A1C00BADF2A /* InvestCoordinatorTests.swift */; };
+		D5C0A86825B37A1C00BADF2A /* InvestHomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A86225B37A1C00BADF2A /* InvestHomeViewControllerTests.swift */; };
+		D5C0A86925B37A1C00BADF2A /* InvestHomeViewControllerProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A86325B37A1C00BADF2A /* InvestHomeViewControllerProtocolMock.swift */; };
+		D5C0A86A25B37A1C00BADF2A /* InvestHomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A86425B37A1C00BADF2A /* InvestHomeViewModelTests.swift */; };
+		D5C0A86B25B37A1C00BADF2A /* InvestHomeViewModelProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A86525B37A1C00BADF2A /* InvestHomeViewModelProtocolMock.swift */; };
+		D5C0A86C25B37A1C00BADF2A /* InvestCoordinatorProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A86625B37A1C00BADF2A /* InvestCoordinatorProtocolMock.swift */; };
+		D5C0A88225B381D700BADF2A /* ProfileCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A87C25B381D700BADF2A /* ProfileCoordinatorTests.swift */; };
+		D5C0A88325B381D700BADF2A /* ProfileHomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A87D25B381D700BADF2A /* ProfileHomeViewControllerTests.swift */; };
+		D5C0A88425B381D700BADF2A /* ProfileHomeViewControllerProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A87E25B381D700BADF2A /* ProfileHomeViewControllerProtocolMock.swift */; };
+		D5C0A88525B381D700BADF2A /* ProfileHomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A87F25B381D700BADF2A /* ProfileHomeViewModelTests.swift */; };
+		D5C0A88625B381D700BADF2A /* ProfileHomeViewModelProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A88025B381D700BADF2A /* ProfileHomeViewModelProtocolMock.swift */; };
+		D5C0A88725B381D700BADF2A /* ProfileHomeCoordinatorProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0A88125B381D700BADF2A /* ProfileHomeCoordinatorProtocolMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +141,31 @@
 		D543C87225AB9BA500B93C54 /* APIAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAccount.swift; sourceTree = "<group>"; };
 		D543C88C25ABA91B00B93C54 /* APICards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICards.swift; sourceTree = "<group>"; };
 		D543C89F25ABAAFE00B93C54 /* APIInvest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIInvest.swift; sourceTree = "<group>"; };
+		D55AA51525B311090078B9FC /* TabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerTests.swift; sourceTree = "<group>"; };
+		D55AA51A25B3143B0078B9FC /* NavigationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerTests.swift; sourceTree = "<group>"; };
+		D55AA51F25B317AA0078B9FC /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		D55AA52425B319230078B9FC /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+		D55AA52B25B3198B0078B9FC /* APIAccountMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAccountMock.swift; sourceTree = "<group>"; };
+		D55AA53625B31B000078B9FC /* BalanceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceMock.swift; sourceTree = "<group>"; };
+		D55AA53E25B31BFA0078B9FC /* APIErrorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorMock.swift; sourceTree = "<group>"; };
+		D55AA54325B31C660078B9FC /* MyInfoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoMock.swift; sourceTree = "<group>"; };
+		D55AA54B25B31D5D0078B9FC /* APICardsMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICardsMock.swift; sourceTree = "<group>"; };
+		D55AA55025B31DAD0078B9FC /* CardsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsMock.swift; sourceTree = "<group>"; };
+		D55AA55525B31EFC0078B9FC /* APIInvestmentsMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIInvestmentsMock.swift; sourceTree = "<group>"; };
+		D55AA55A25B31F450078B9FC /* MyInvestmentsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInvestmentsMock.swift; sourceTree = "<group>"; };
+		D55AA56225B320FC0078B9FC /* InvestmentsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsMock.swift; sourceTree = "<group>"; };
+		D55AA57025B323820078B9FC /* ComingSoonViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewControllerTests.swift; sourceTree = "<group>"; };
+		D55AA57925B331BB0078B9FC /* ComingSoonViewModelProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewModelProtocolMock.swift; sourceTree = "<group>"; };
+		D55AA58125B3328A0078B9FC /* ComingSoonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewModelTests.swift; sourceTree = "<group>"; };
+		D55AA58625B332DA0078B9FC /* ComingSoonViewControllerProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewControllerProtocolMock.swift; sourceTree = "<group>"; };
+		D565EF1E25B362C900B84137 /* AccountCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorTests.swift; sourceTree = "<group>"; };
+		D565EF2425B3653700B84137 /* NavigationControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerMock.swift; sourceTree = "<group>"; };
+		D565EF2C25B3695B00B84137 /* CardsCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCoordinatorTests.swift; sourceTree = "<group>"; };
+		D565EF2D25B3695B00B84137 /* CardsHomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsHomeViewControllerTests.swift; sourceTree = "<group>"; };
+		D565EF2E25B3695B00B84137 /* CardsHomeViewControllerProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsHomeViewControllerProtocolMock.swift; sourceTree = "<group>"; };
+		D565EF2F25B3695B00B84137 /* CardsHomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsHomeViewModelTests.swift; sourceTree = "<group>"; };
+		D565EF3025B3695B00B84137 /* CardsHomeViewModelProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsHomeViewModelProtocolMock.swift; sourceTree = "<group>"; };
+		D565EF4225B36A5D00B84137 /* CardsCoordinatorProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCoordinatorProtocolMock.swift; sourceTree = "<group>"; };
 		D590C215259623C900B833E3 /* Bank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D590C218259623C900B833E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D590C21A259623C900B833E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,7 +174,6 @@
 		D590C224259623CA00B833E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D590C226259623CA00B833E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D590C22B259623CA00B833E3 /* BankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D590C22F259623CA00B833E3 /* BankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTests.swift; sourceTree = "<group>"; };
 		D590C231259623CA00B833E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D590C236259623CA00B833E3 /* BankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D590C23A259623CA00B833E3 /* BankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankUITests.swift; sourceTree = "<group>"; };
@@ -133,11 +209,39 @@
 		D590C3662597C85700B833E3 /* ComingSoonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComingSoonViewController.xib; sourceTree = "<group>"; };
 		D590C3802598D06200B833E3 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		D590C3812598D06200B833E3 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
-		D590C38B2599501400B833E3 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		D590C394259957CD00B833E3 /* CardInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoTableViewCell.swift; sourceTree = "<group>"; };
 		D590C395259957CD00B833E3 /* CardInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardInfoTableViewCell.xib; sourceTree = "<group>"; };
 		D590C3A8259CB22000B833E3 /* MenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableView.swift; sourceTree = "<group>"; };
 		D590C3AD259CB4B700B833E3 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
+		D5B8F44B25B337C5009E9AA6 /* ItemTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCellTests.swift; sourceTree = "<group>"; };
+		D5B8F45425B34902009E9AA6 /* BalanceTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableViewCellTests.swift; sourceTree = "<group>"; };
+		D5B8F45D25B34B81009E9AA6 /* CardTableViewCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCellTests.swift; sourceTree = "<group>"; };
+		D5BA0C4B25B34E9F00AE4682 /* CardInfoTableViewCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInfoTableViewCellTests.swift; sourceTree = "<group>"; };
+		D5BA0C5425B34F5C00AE4682 /* MenuTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewTests.swift; sourceTree = "<group>"; };
+		D5BA0C6025B3504C00AE4682 /* MenuSectionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSectionMock.swift; sourceTree = "<group>"; };
+		D5BA0C6525B3506100AE4682 /* MenuMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuMock.swift; sourceTree = "<group>"; };
+		D5BA0C6B25B3524100AE4682 /* MenuTableViewProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewProtocolMock.swift; sourceTree = "<group>"; };
+		D5BA0C7325B3557F00AE4682 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		D5BA0C7825B3582000AE4682 /* APIErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorTest.swift; sourceTree = "<group>"; };
+		D5BA0C8025B358B000AE4682 /* ModelErrorResponseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelErrorResponseMock.swift; sourceTree = "<group>"; };
+		D5BA0CA625B35A4E00AE4682 /* AccountHomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHomeViewControllerTests.swift; sourceTree = "<group>"; };
+		D5BA0CA725B35A4E00AE4682 /* AccountHomeViewControllerProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHomeViewControllerProtocolMock.swift; sourceTree = "<group>"; };
+		D5BA0CA825B35A4E00AE4682 /* AccountHomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHomeViewModelTests.swift; sourceTree = "<group>"; };
+		D5BA0CA925B35A4E00AE4682 /* AccountHomeViewModelProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHomeViewModelProtocolMock.swift; sourceTree = "<group>"; };
+		D5BA0CB525B35B8800AE4682 /* AccountCoordinatorProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorProtocolMock.swift; sourceTree = "<group>"; };
+		D5C0A85C25B3718200BADF2A /* CardMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMock.swift; sourceTree = "<group>"; };
+		D5C0A86125B37A1C00BADF2A /* InvestCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestCoordinatorTests.swift; sourceTree = "<group>"; };
+		D5C0A86225B37A1C00BADF2A /* InvestHomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestHomeViewControllerTests.swift; sourceTree = "<group>"; };
+		D5C0A86325B37A1C00BADF2A /* InvestHomeViewControllerProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestHomeViewControllerProtocolMock.swift; sourceTree = "<group>"; };
+		D5C0A86425B37A1C00BADF2A /* InvestHomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestHomeViewModelTests.swift; sourceTree = "<group>"; };
+		D5C0A86525B37A1C00BADF2A /* InvestHomeViewModelProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestHomeViewModelProtocolMock.swift; sourceTree = "<group>"; };
+		D5C0A86625B37A1C00BADF2A /* InvestCoordinatorProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestCoordinatorProtocolMock.swift; sourceTree = "<group>"; };
+		D5C0A87C25B381D700BADF2A /* ProfileCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorTests.swift; sourceTree = "<group>"; };
+		D5C0A87D25B381D700BADF2A /* ProfileHomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewControllerTests.swift; sourceTree = "<group>"; };
+		D5C0A87E25B381D700BADF2A /* ProfileHomeViewControllerProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewControllerProtocolMock.swift; sourceTree = "<group>"; };
+		D5C0A87F25B381D700BADF2A /* ProfileHomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewModelTests.swift; sourceTree = "<group>"; };
+		D5C0A88025B381D700BADF2A /* ProfileHomeViewModelProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewModelProtocolMock.swift; sourceTree = "<group>"; };
+		D5C0A88125B381D700BADF2A /* ProfileHomeCoordinatorProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeCoordinatorProtocolMock.swift; sourceTree = "<group>"; };
 		D96BF08EB01579AD15D20E82 /* Pods-Bank-BankUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bank-BankUITests.release.xcconfig"; path = "Target Support Files/Pods-Bank-BankUITests/Pods-Bank-BankUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F30F17C32ECB84AF217F22DE /* Pods-Bank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bank.debug.xcconfig"; path = "Target Support Files/Pods-Bank/Pods-Bank.debug.xcconfig"; sourceTree = "<group>"; };
 		F612AC1A1D9537D41D8C8EE5 /* Pods_Bank_BankUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bank_BankUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +297,133 @@
 			path = api;
 			sourceTree = "<group>";
 		};
+		D55AA52925B3195B0078B9FC /* api */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA0C7325B3557F00AE4682 /* APITests.swift */,
+				D5BA0C7825B3582000AE4682 /* APIErrorTest.swift */,
+				D55AA52A25B3196D0078B9FC /* mocks */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		D55AA52A25B3196D0078B9FC /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D55AA52B25B3198B0078B9FC /* APIAccountMock.swift */,
+				D55AA54B25B31D5D0078B9FC /* APICardsMock.swift */,
+				D55AA55525B31EFC0078B9FC /* APIInvestmentsMock.swift */,
+				D55AA53E25B31BFA0078B9FC /* APIErrorMock.swift */,
+				D55AA53525B31AEB0078B9FC /* models */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		D55AA53325B31AA00078B9FC /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA0C5C25B3502D00AE4682 /* mocks */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		D55AA53425B31AB60078B9FC /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA0C8825B359C500AE4682 /* Account */,
+				D5BA0C8725B359BF00AE4682 /* Cards */,
+				D5BA0C8625B359B900AE4682 /* Invest */,
+				D5BA0C8525B359B000AE4682 /* Profile */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		D55AA53525B31AEB0078B9FC /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D55AA53625B31B000078B9FC /* BalanceMock.swift */,
+				D55AA54325B31C660078B9FC /* MyInfoMock.swift */,
+				D5C0A85C25B3718200BADF2A /* CardMock.swift */,
+				D55AA55025B31DAD0078B9FC /* CardsMock.swift */,
+				D55AA55A25B31F450078B9FC /* MyInvestmentsMock.swift */,
+				D55AA56225B320FC0078B9FC /* InvestmentsMock.swift */,
+				D5BA0C8025B358B000AE4682 /* ModelErrorResponseMock.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		D55AA56725B322C80078B9FC /* components */ = {
+			isa = PBXGroup;
+			children = (
+				D55AA56825B322D50078B9FC /* modules */,
+				D5B8F44925B337A2009E9AA6 /* cells */,
+				D5BA0C5325B34F4000AE4682 /* tableViews */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		D55AA56825B322D50078B9FC /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				D55AA56F25B3234C0078B9FC /* ComingSoon */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		D55AA56F25B3234C0078B9FC /* ComingSoon */ = {
+			isa = PBXGroup;
+			children = (
+				D55AA57025B323820078B9FC /* ComingSoonViewControllerTests.swift */,
+				D55AA58125B3328A0078B9FC /* ComingSoonViewModelTests.swift */,
+				D55AA57825B323F30078B9FC /* mocks */,
+			);
+			path = ComingSoon;
+			sourceTree = "<group>";
+		};
+		D55AA57825B323F30078B9FC /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D55AA57925B331BB0078B9FC /* ComingSoonViewModelProtocolMock.swift */,
+				D55AA58625B332DA0078B9FC /* ComingSoonViewControllerProtocolMock.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		D565EF2325B3651900B84137 /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D565EF2425B3653700B84137 /* NavigationControllerMock.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		D565EF3925B3696700B84137 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D565EF2D25B3695B00B84137 /* CardsHomeViewControllerTests.swift */,
+				D565EF2F25B3695B00B84137 /* CardsHomeViewModelTests.swift */,
+				D565EF4025B369B400B84137 /* mocks */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D565EF4025B369B400B84137 /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D565EF2E25B3695B00B84137 /* CardsHomeViewControllerProtocolMock.swift */,
+				D565EF3025B3695B00B84137 /* CardsHomeViewModelProtocolMock.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		D565EF4125B36A3700B84137 /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D565EF4225B36A5D00B84137 /* CardsCoordinatorProtocolMock.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
 		D590C20C259623C800B833E3 = {
 			isa = PBXGroup;
 			children = (
@@ -232,7 +463,10 @@
 			isa = PBXGroup;
 			children = (
 				D590C26D2596276100B833E3 /* base */,
-				D590C22F259623CA00B833E3 /* BankTests.swift */,
+				D55AA56725B322C80078B9FC /* components */,
+				D55AA52925B3195B0078B9FC /* api */,
+				D55AA53425B31AB60078B9FC /* modules */,
+				D55AA53325B31AA00078B9FC /* models */,
 			);
 			path = BankTests;
 			sourceTree = "<group>";
@@ -315,6 +549,11 @@
 			isa = PBXGroup;
 			children = (
 				D590C231259623CA00B833E3 /* Info.plist */,
+				D55AA51525B311090078B9FC /* TabBarControllerTests.swift */,
+				D55AA51A25B3143B0078B9FC /* NavigationControllerTests.swift */,
+				D55AA51F25B317AA0078B9FC /* CoordinatorTests.swift */,
+				D55AA52425B319230078B9FC /* ViewModelTests.swift */,
+				D565EF2325B3651900B84137 /* mocks */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -370,10 +609,8 @@
 		D590C2D625969E1900B833E3 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				D590C38A25994FF900B833E3 /* buttons */,
-				D590C3572597C7C500B833E3 /* viewControllers */,
+				D590C3572597C7C500B833E3 /* modules */,
 				D590C2D725969E2800B833E3 /* cells */,
-				D590C31E2597764000B833E3 /* views */,
 				D590C3A7259CB1F200B833E3 /* tableViews */,
 			);
 			path = components;
@@ -406,13 +643,6 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
-		D590C31E2597764000B833E3 /* views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
 		D590C34525977E8600B833E3 /* models */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,12 +671,12 @@
 			path = ComingSoon;
 			sourceTree = "<group>";
 		};
-		D590C3572597C7C500B833E3 /* viewControllers */ = {
+		D590C3572597C7C500B833E3 /* modules */ = {
 			isa = PBXGroup;
 			children = (
 				D590C3562597C7A600B833E3 /* ComingSoon */,
 			);
-			path = viewControllers;
+			path = modules;
 			sourceTree = "<group>";
 		};
 		D590C37F2598D04500B833E3 /* Card */ = {
@@ -456,14 +686,6 @@
 				D590C3812598D06200B833E3 /* CardCollectionViewCell.xib */,
 			);
 			path = Card;
-			sourceTree = "<group>";
-		};
-		D590C38A25994FF900B833E3 /* buttons */ = {
-			isa = PBXGroup;
-			children = (
-				D590C38B2599501400B833E3 /* MenuButton.swift */,
-			);
-			path = buttons;
 			sourceTree = "<group>";
 		};
 		D590C393259957A300B833E3 /* CardInfo */ = {
@@ -481,6 +703,196 @@
 				D590C3A8259CB22000B833E3 /* MenuTableView.swift */,
 			);
 			path = tableViews;
+			sourceTree = "<group>";
+		};
+		D5B8F44925B337A2009E9AA6 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				D5B8F44A25B337A9009E9AA6 /* Item */,
+				D5B8F45325B348CB009E9AA6 /* Balance */,
+				D5B8F45C25B34B65009E9AA6 /* Card */,
+				D5BA0C4A25B34E5700AE4682 /* CardInfo */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		D5B8F44A25B337A9009E9AA6 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				D5B8F44B25B337C5009E9AA6 /* ItemTableViewCellTests.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		D5B8F45325B348CB009E9AA6 /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				D5B8F45425B34902009E9AA6 /* BalanceTableViewCellTests.swift */,
+			);
+			path = Balance;
+			sourceTree = "<group>";
+		};
+		D5B8F45C25B34B65009E9AA6 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				D5B8F45D25B34B81009E9AA6 /* CardTableViewCellTests.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		D5BA0C4A25B34E5700AE4682 /* CardInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA0C4B25B34E9F00AE4682 /* CardInfoTableViewCellTests.swift */,
+			);
+			path = CardInfo;
+			sourceTree = "<group>";
+		};
+		D5BA0C5325B34F4000AE4682 /* tableViews */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA0C5425B34F5C00AE4682 /* MenuTableViewTests.swift */,
+				D5BA0C6A25B3523200AE4682 /* mocks */,
+			);
+			path = tableViews;
+			sourceTree = "<group>";
+		};
+		D5BA0C5C25B3502D00AE4682 /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA0C6025B3504C00AE4682 /* MenuSectionMock.swift */,
+				D5BA0C6525B3506100AE4682 /* MenuMock.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		D5BA0C6A25B3523200AE4682 /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA0C6B25B3524100AE4682 /* MenuTableViewProtocolMock.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		D5BA0C8525B359B000AE4682 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D5C0A87C25B381D700BADF2A /* ProfileCoordinatorTests.swift */,
+				D5C0A88E25B381F900BADF2A /* Home */,
+				D5C0A89025B3820500BADF2A /* mocks */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D5BA0C8625B359B900AE4682 /* Invest */ = {
+			isa = PBXGroup;
+			children = (
+				D5C0A86125B37A1C00BADF2A /* InvestCoordinatorTests.swift */,
+				D5C0A87425B37A5700BADF2A /* Home */,
+				D5C0A87325B37A4800BADF2A /* mocks */,
+			);
+			path = Invest;
+			sourceTree = "<group>";
+		};
+		D5BA0C8725B359BF00AE4682 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				D565EF2C25B3695B00B84137 /* CardsCoordinatorTests.swift */,
+				D565EF3925B3696700B84137 /* Home */,
+				D565EF4125B36A3700B84137 /* mocks */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		D5BA0C8825B359C500AE4682 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				D565EF1E25B362C900B84137 /* AccountCoordinatorTests.swift */,
+				D5BA0CBD25B35C1F00AE4682 /* Home */,
+				D5BA0CB125B35A5600AE4682 /* mocks */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		D5BA0CB125B35A5600AE4682 /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA0CB525B35B8800AE4682 /* AccountCoordinatorProtocolMock.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		D5BA0CBD25B35C1F00AE4682 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA0CA625B35A4E00AE4682 /* AccountHomeViewControllerTests.swift */,
+				D5BA0CA825B35A4E00AE4682 /* AccountHomeViewModelTests.swift */,
+				D5BA0CBE25B35C3600AE4682 /* mocks */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D5BA0CBE25B35C3600AE4682 /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA0CA725B35A4E00AE4682 /* AccountHomeViewControllerProtocolMock.swift */,
+				D5BA0CA925B35A4E00AE4682 /* AccountHomeViewModelProtocolMock.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		D5C0A87325B37A4800BADF2A /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D5C0A86625B37A1C00BADF2A /* InvestCoordinatorProtocolMock.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		D5C0A87425B37A5700BADF2A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D5C0A86225B37A1C00BADF2A /* InvestHomeViewControllerTests.swift */,
+				D5C0A86425B37A1C00BADF2A /* InvestHomeViewModelTests.swift */,
+				D5C0A87525B37A6500BADF2A /* mocks */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D5C0A87525B37A6500BADF2A /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D5C0A86325B37A1C00BADF2A /* InvestHomeViewControllerProtocolMock.swift */,
+				D5C0A86525B37A1C00BADF2A /* InvestHomeViewModelProtocolMock.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		D5C0A88E25B381F900BADF2A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D5C0A87D25B381D700BADF2A /* ProfileHomeViewControllerTests.swift */,
+				D5C0A87F25B381D700BADF2A /* ProfileHomeViewModelTests.swift */,
+				D5C0A88F25B3820000BADF2A /* mocks */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D5C0A88F25B3820000BADF2A /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D5C0A87E25B381D700BADF2A /* ProfileHomeViewControllerProtocolMock.swift */,
+				D5C0A88025B381D700BADF2A /* ProfileHomeViewModelProtocolMock.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		D5C0A89025B3820500BADF2A /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D5C0A88125B381D700BADF2A /* ProfileHomeCoordinatorProtocolMock.swift */,
+			);
+			path = mocks;
 			sourceTree = "<group>";
 		};
 		F61ADEDCA597747059B6BDA2 /* Pods */ = {
@@ -763,7 +1175,6 @@
 				D590C3672597C85700B833E3 /* ComingSoonViewController.swift in Sources */,
 				D590C2A42596312200B833E3 /* ProfileCoordinator.swift in Sources */,
 				D590C2BF25963DA500B833E3 /* InvestHomeViewModel.swift in Sources */,
-				D590C38C2599501400B833E3 /* MenuButton.swift in Sources */,
 				D590C2BE25963DA500B833E3 /* InvestHomeViewController.swift in Sources */,
 				D590C21B259623C900B833E3 /* SceneDelegate.swift in Sources */,
 				D590C3132596B35200B833E3 /* SearchController.swift in Sources */,
@@ -784,7 +1195,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D590C230259623CA00B833E3 /* BankTests.swift in Sources */,
+				D55AA55125B31DAD0078B9FC /* CardsMock.swift in Sources */,
+				D5BA0CB625B35B8800AE4682 /* AccountCoordinatorProtocolMock.swift in Sources */,
+				D5C0A86825B37A1C00BADF2A /* InvestHomeViewControllerTests.swift in Sources */,
+				D55AA52025B317AA0078B9FC /* CoordinatorTests.swift in Sources */,
+				D5B8F45E25B34B81009E9AA6 /* CardTableViewCellTests.swift in Sources */,
+				D5B8F45525B34902009E9AA6 /* BalanceTableViewCellTests.swift in Sources */,
+				D5BA0C6125B3504C00AE4682 /* MenuSectionMock.swift in Sources */,
+				D5BA0C4C25B34E9F00AE4682 /* CardInfoTableViewCellTests.swift in Sources */,
+				D55AA54425B31C660078B9FC /* MyInfoMock.swift in Sources */,
+				D5C0A88425B381D700BADF2A /* ProfileHomeViewControllerProtocolMock.swift in Sources */,
+				D55AA53725B31B000078B9FC /* BalanceMock.swift in Sources */,
+				D5C0A88725B381D700BADF2A /* ProfileHomeCoordinatorProtocolMock.swift in Sources */,
+				D55AA58725B332DA0078B9FC /* ComingSoonViewControllerProtocolMock.swift in Sources */,
+				D5C0A86925B37A1C00BADF2A /* InvestHomeViewControllerProtocolMock.swift in Sources */,
+				D5BA0CAB25B35A4E00AE4682 /* AccountHomeViewControllerProtocolMock.swift in Sources */,
+				D55AA57A25B331BB0078B9FC /* ComingSoonViewModelProtocolMock.swift in Sources */,
+				D5C0A88525B381D700BADF2A /* ProfileHomeViewModelTests.swift in Sources */,
+				D55AA57125B323820078B9FC /* ComingSoonViewControllerTests.swift in Sources */,
+				D5BA0CAA25B35A4E00AE4682 /* AccountHomeViewControllerTests.swift in Sources */,
+				D565EF4325B36A5D00B84137 /* CardsCoordinatorProtocolMock.swift in Sources */,
+				D5B8F44C25B337C5009E9AA6 /* ItemTableViewCellTests.swift in Sources */,
+				D5C0A86B25B37A1C00BADF2A /* InvestHomeViewModelProtocolMock.swift in Sources */,
+				D565EF3125B3695B00B84137 /* CardsCoordinatorTests.swift in Sources */,
+				D5C0A86C25B37A1C00BADF2A /* InvestCoordinatorProtocolMock.swift in Sources */,
+				D55AA53F25B31BFA0078B9FC /* APIErrorMock.swift in Sources */,
+				D5C0A86A25B37A1C00BADF2A /* InvestHomeViewModelTests.swift in Sources */,
+				D55AA56325B320FC0078B9FC /* InvestmentsMock.swift in Sources */,
+				D5BA0CAC25B35A4E00AE4682 /* AccountHomeViewModelTests.swift in Sources */,
+				D5BA0C7425B3557F00AE4682 /* APITests.swift in Sources */,
+				D55AA52525B319230078B9FC /* ViewModelTests.swift in Sources */,
+				D55AA58225B3328A0078B9FC /* ComingSoonViewModelTests.swift in Sources */,
+				D5BA0C6625B3506100AE4682 /* MenuMock.swift in Sources */,
+				D565EF3325B3695B00B84137 /* CardsHomeViewControllerProtocolMock.swift in Sources */,
+				D55AA54C25B31D5D0078B9FC /* APICardsMock.swift in Sources */,
+				D5BA0C7925B3582000AE4682 /* APIErrorTest.swift in Sources */,
+				D55AA51625B311090078B9FC /* TabBarControllerTests.swift in Sources */,
+				D565EF3225B3695B00B84137 /* CardsHomeViewControllerTests.swift in Sources */,
+				D55AA52C25B3198B0078B9FC /* APIAccountMock.swift in Sources */,
+				D5BA0C5525B34F5C00AE4682 /* MenuTableViewTests.swift in Sources */,
+				D5BA0C6C25B3524100AE4682 /* MenuTableViewProtocolMock.swift in Sources */,
+				D55AA51B25B3143B0078B9FC /* NavigationControllerTests.swift in Sources */,
+				D5C0A85D25B3718200BADF2A /* CardMock.swift in Sources */,
+				D5C0A88325B381D700BADF2A /* ProfileHomeViewControllerTests.swift in Sources */,
+				D565EF3425B3695B00B84137 /* CardsHomeViewModelTests.swift in Sources */,
+				D5C0A86725B37A1C00BADF2A /* InvestCoordinatorTests.swift in Sources */,
+				D55AA55625B31EFC0078B9FC /* APIInvestmentsMock.swift in Sources */,
+				D565EF1F25B362C900B84137 /* AccountCoordinatorTests.swift in Sources */,
+				D55AA55B25B31F450078B9FC /* MyInvestmentsMock.swift in Sources */,
+				D565EF2525B3653700B84137 /* NavigationControllerMock.swift in Sources */,
+				D565EF3525B3695B00B84137 /* CardsHomeViewModelProtocolMock.swift in Sources */,
+				D5C0A88625B381D700BADF2A /* ProfileHomeViewModelProtocolMock.swift in Sources */,
+				D5BA0C8125B358B000AE4682 /* ModelErrorResponseMock.swift in Sources */,
+				D5C0A88225B381D700BADF2A /* ProfileCoordinatorTests.swift in Sources */,
+				D5BA0CAD25B35A4E00AE4682 /* AccountHomeViewModelProtocolMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

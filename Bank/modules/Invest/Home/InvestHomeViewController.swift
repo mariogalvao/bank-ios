@@ -16,7 +16,7 @@ class InvestHomeViewController: ViewController {
     
     var viewModelDelegate: InvestHomeViewModelProtocol?
     
-    private var balance: String = ""
+    var balance: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()

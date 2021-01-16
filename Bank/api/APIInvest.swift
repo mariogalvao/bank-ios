@@ -15,7 +15,7 @@ protocol APIInvestmentsProtocol: APIProtocol {
     
 }
 
-class APIInvestments: API {
+class APIInvestments: API, APIInvestmentsProtocol {
     
     func getMyInvestments(completion: @escaping (Result<MyInvestments, APIError>) -> Void) {
         InvestmentsAPI.getMyInvestments { (response, error) in

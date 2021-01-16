@@ -19,6 +19,8 @@ class ProfileHomeViewController: ViewController {
     @IBOutlet weak var bankLabel: UILabel!
     @IBOutlet weak var agencyLabel: UILabel!
     @IBOutlet weak var accountLabel: UILabel!
+    @IBOutlet weak var needHelpButton: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
     
     var viewModelDelegate: ProfileHomeViewModelProtocol?
 

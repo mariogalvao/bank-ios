@@ -15,7 +15,7 @@ protocol APIAccountProtocol: APIProtocol {
     
 }
 
-class APIAccount: API {
+class APIAccount: API, APIAccountProtocol {
     
     func getBalance(completion: @escaping (Result<Balance, APIError>) -> Void) {
         AccountAPI.getMyBalance { (response, error) in

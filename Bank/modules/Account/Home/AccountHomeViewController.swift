@@ -13,9 +13,9 @@ class AccountHomeViewController: ViewController {
     
     var viewModelDelegate: AccountHomeViewModelProtocol?
     
-    private var balance: String = ""
+    var balance: String = ""
     
-    private let searchController = SearchController(searchResultsController: nil)
+    let searchController = SearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()

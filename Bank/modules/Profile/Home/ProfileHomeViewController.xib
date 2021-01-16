@@ -17,7 +17,9 @@
                 <outlet property="bankLabel" destination="Ft5-HZ-vfe" id="mB6-YZ-iGe"/>
                 <outlet property="cpfLabel" destination="z0X-yF-DOk" id="16k-ry-No7"/>
                 <outlet property="emailLabel" destination="dDZ-WT-msI" id="iLF-xl-OXN"/>
+                <outlet property="logoutButton" destination="Cjd-gd-3jc" id="8pg-jK-3CL"/>
                 <outlet property="nameLabel" destination="U7w-wT-0hN" id="CgM-TK-c6T"/>
+                <outlet property="needHelpButton" destination="89c-5c-Iuc" id="5Dw-Rd-6Aj"/>
                 <outlet property="personActivityIndicator" destination="F0j-Fz-dRa" id="rSb-Zm-3Un"/>
                 <outlet property="phoneLabel" destination="MLs-8F-1FL" id="CKi-eR-J3o"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

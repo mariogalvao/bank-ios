@@ -8,9 +8,7 @@
 import UIKit
 
 class InvestCoordinator: Coordinator {
-    
-    var navigationController = NavigationController()
-    
+        
     func firstViewController() -> NavigationController {
         let item = UITabBarItem(title: "Investimentos", image: UIImage(systemName: "dollarsign.circle.fill"), tag: 2)
         let viewController = InvestHomeViewController()

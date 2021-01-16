@@ -7,7 +7,13 @@
 
 import UIKit
 
-class Coordinator: NSObject {
+class Coordinator {
+    
+    var navigationController: NavigationController
+    
+    init(navigationController: NavigationController = NavigationController()) {
+        self.navigationController = navigationController
+    }
     
     func comingSoon(title: String) -> UIViewController {
         let viewController = ComingSoonViewController()
