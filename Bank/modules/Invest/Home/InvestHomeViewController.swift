@@ -10,7 +10,6 @@ import UIKit
 class InvestHomeViewController: ViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var stackViewSegmentedControl: UIStackView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: MenuTableView!
     

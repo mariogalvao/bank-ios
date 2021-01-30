@@ -13,7 +13,6 @@
             <connections>
                 <outlet property="activityIndicator" destination="6nn-y5-v91" id="EcR-XQ-Gy5"/>
                 <outlet property="segmentedControl" destination="Ljr-n6-oa3" id="NG9-J1-6ss"/>
-                <outlet property="stackViewSegmentedControl" destination="cB0-PC-SKP" id="9bC-uU-zt5"/>
                 <outlet property="tableView" destination="Acm-Jj-61O" id="Toe-SV-EvY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
